@@ -10,7 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak var ssbutton: UIButton!
     @IBOutlet weak var imageview: UIImageView!
+    
     @IBAction func backpage(segue: UIStoryboardSegue){}
     override func prepare(for segue:UIStoryboardSegue, sender: Any?){
         let ResultViewController:resultViewController = segue.destination as! resultViewController
@@ -18,9 +21,13 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var nbutton: UIButton!
+    
     @IBOutlet weak var bbutton: UIButton!
+    
     @IBAction func onTapImage(_ sender: AnyObject) {
         performSegue(withIdentifier: "result", sender: nil)
+        self.timer?.invalidate()
+        ssbutton.setTitle("再生", for: .normal)
     }
     
     var timer: Timer?
@@ -54,24 +61,28 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func nextbutton(_ sender: UIButton) {
-        dispImageNo += 1
-        displayImage()
-        
-    }
     
-    @IBAction func backbutton(_ sender: UIButton) {
+    @IBAction func nextbutton(_ sender: AnyObject) {
+       dispImageNo += 1
+        displayImage()
+        }
+    
+    
+    @IBAction func backbutton(_ sender: AnyObject) {
         dispImageNo -= 1
         displayImage()
     }
 
-    @IBAction func startstopbutton(_ sender: UIButton) {
+    
+    @IBAction func startstopbutton(_ sender: AnyObject) {
         if self.timer == nil {timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(onTimer), userInfo: nil, repeats: true)
+        ssbutton.setTitle("停止", for: .normal)
         nbutton.isEnabled = false
         bbutton.isEnabled = false}//#selecterはメソッドを呼べる
         else if self.timer != nil {
             self.timer?.invalidate()
             self.timer = nil
+            ssbutton.setTitle("再生", for: .normal)
             nbutton.isEnabled = true
             bbutton.isEnabled = true
             
