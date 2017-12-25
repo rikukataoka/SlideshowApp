@@ -27,7 +27,10 @@ class ViewController: UIViewController {
     @IBAction func onTapImage(_ sender: AnyObject) {
         performSegue(withIdentifier: "result", sender: nil)
         self.timer?.invalidate()
+        self.timer = nil
         ssbutton.setTitle("再生", for: .normal)
+        nbutton.isEnabled = true
+        bbutton.isEnabled = true
     }
     
     var timer: Timer?
