@@ -21,18 +21,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-aI-lE2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="zzF-kT-dJ7"/>
+                                </constraints>
                                 <state key="normal" title="進む"/>
                                 <connections>
                                     <action selector="nextbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OR0-ze-ewZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0Z-cF-fhn">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31" id="1SV-iE-cBJ"/>
+                                </constraints>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="backbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sNS-Cp-Odp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thV-vs-RCo">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31" id="Anf-dH-Goo"/>
+                                </constraints>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="startstopbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="udG-ZL-ffa"/>
@@ -50,19 +59,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="H0Z-cF-fhn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="156" id="5MK-hS-Wss"/>
-                            <constraint firstItem="H0Z-cF-fhn" firstAttribute="top" secondItem="Dat-7U-XGW" secondAttribute="bottom" constant="100" id="6pS-9x-zZu"/>
+                            <constraint firstItem="thV-vs-RCo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="220" id="3vY-81-WqB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Xaa-aI-lE2" secondAttribute="trailing" constant="288" id="EP7-9G-V3L"/>
                             <constraint firstItem="Dat-7U-XGW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="FOq-fQ-vEy"/>
+                            <constraint firstItem="thV-vs-RCo" firstAttribute="top" secondItem="Dat-7U-XGW" secondAttribute="bottom" constant="100" id="GyG-Jt-ikp"/>
+                            <constraint firstItem="H0Z-cF-fhn" firstAttribute="top" secondItem="Dat-7U-XGW" secondAttribute="bottom" constant="100" id="HcZ-pR-DHh"/>
+                            <constraint firstItem="H0Z-cF-fhn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JuS-XR-ZOc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="thV-vs-RCo" secondAttribute="bottom" constant="34" id="KZO-7K-h3B"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dat-7U-XGW" secondAttribute="trailing" constant="10" id="Q8B-19-Fpn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="H0Z-cF-fhn" secondAttribute="trailing" constant="156" id="S35-ck-Yyz"/>
                             <constraint firstItem="Dat-7U-XGW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="TOP-yM-OD3"/>
-                            <constraint firstItem="thV-vs-RCo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="284" id="TdX-7U-4kh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xaa-aI-lE2" secondAttribute="bottom" constant="29" id="TpA-JU-kPe"/>
-                            <constraint firstItem="thV-vs-RCo" firstAttribute="top" secondItem="Dat-7U-XGW" secondAttribute="bottom" constant="100" id="YuH-Ae-VFN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H0Z-cF-fhn" secondAttribute="bottom" constant="34" id="cjI-5t-jLB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="thV-vs-RCo" secondAttribute="trailing" constant="28" id="iOB-JS-aag"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="thV-vs-RCo" secondAttribute="bottom" constant="34" id="qjO-Jk-nsb"/>
                             <constraint firstItem="Xaa-aI-lE2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="w1b-XL-2If"/>
                             <constraint firstItem="Xaa-aI-lE2" firstAttribute="top" secondItem="Dat-7U-XGW" secondAttribute="bottom" constant="100" id="zDL-Nh-Aaj"/>
                         </constraints>
